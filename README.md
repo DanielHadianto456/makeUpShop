@@ -21,6 +21,67 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Cara Setup Proyek
+
+Berikut adalah langkah-langkah untuk men-setup proyek ini di lingkungan lokal Anda:
+
+1.  **Clone Repository**
+    ```bash
+    git clone https_atau_ssh_repository_anda.git
+    cd nama_folder_proyek
+    ```
+
+2.  **Install Dependencies Composer**
+    Pastikan Anda memiliki [Composer](https://getcomposer.org/) terinstall.
+    ```bash
+    composer install
+    ```
+
+3.  **Buat File Environment**
+    Salin file `.env.example` menjadi `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+
+4.  **Generate Application Key**
+    ```bash
+    php artisan key:generate
+    ```
+
+5.  **Konfigurasi Database**
+    Buka file `.env` dan sesuaikan konfigurasi database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD, dll.).
+    Contoh untuk MySQL:
+    ```
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=makeup_shop
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+    Pastikan Anda sudah membuat database dengan nama yang sesuai (contoh: `makeup_shop`).
+
+6.  **Jalankan Migrasi Database**
+    Ini akan membuat tabel-tabel yang dibutuhkan dalam database Anda.
+    ```bash
+    php artisan migrate
+    ```
+
+7.  **(Opsional) Jalankan Database Seeders**
+    Jika proyek memiliki seeder untuk data awal, jalankan:
+    ```bash
+    php artisan db:seed
+    ```
+
+8.  **Jalankan Server Development**
+    ```bash
+    php artisan serve
+    ```
+    Aplikasi akan berjalan secara default di `http://localhost:8000`.
+
+9.  **Testing API dengan Postman**
+    Anda dapat mengimpor koleksi Postman yang tersedia di `routes/postman.txt` (atau `postman_collection.json` jika Anda menyimpannya sebagai file JSON) untuk menguji endpoint API kategori. Pastikan untuk mengatur `{{baseUrl}}` di Postman ke `http://localhost:8000` atau URL server Anda.
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
