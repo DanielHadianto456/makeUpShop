@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Validator; // Import Validator
 
 class CategoryController extends Controller
 {
-    //CRUD category hahahahahaah
+    //CRUD
 
-    //C = Create Category Data
+    //C = Create Data
     //R = Read Data
     //U = Update Data
     //D = Delete Data
