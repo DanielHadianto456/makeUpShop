@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     //CRUD category
 
-    //C = Create Data
+    //C = Create Category Data
     //R = Read Data
     //U = Update Data
     //D = Delete Data
